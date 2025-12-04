@@ -3,7 +3,7 @@ name: Windows Self-Hosted Runner
 on:
   workflow_call:
     inputs:
-      project-name:
+      GAME_ID:
         required: true
         type: string
     secrets:
@@ -22,7 +22,7 @@ on:
       WEBHOOK_URL:
         required: true
 env: 
-  GAME_ID: 'S5G-H5-99943'
+  GAME_ID: ${{ inputs.GAME_ID }}
   # Cocos Creator Version
   COCOS_VERSION: 'C:\ProgramData\cocos\editors\Creator\3.7.2\CocosCreator.exe'
   DEPLOY_STR: creator
