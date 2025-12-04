@@ -6,6 +6,19 @@ on:
       project-name:
         required: true
         type: string
+    secrets:
+      TOKEN:
+        required: true
+      AWS_ENV:
+        required: true
+      CLOUD_FRONT:
+        required: true
+      CLOUD_FLARE:
+        required: true
+      CDNETWORKS:
+        required: true
+      AKAMAI:
+        required: true
 
 env: 
   GAME_ID: 'S5G-H5-99943'
