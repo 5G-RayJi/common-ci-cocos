@@ -19,7 +19,8 @@ on:
         required: true
       AKAMAI:
         required: true
-
+      WEBHOOK_URL:
+        required: true
 env: 
   GAME_ID: 'S5G-H5-99943'
   # Cocos Creator Version
