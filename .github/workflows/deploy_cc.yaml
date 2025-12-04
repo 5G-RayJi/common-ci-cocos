@@ -136,7 +136,14 @@ jobs:
               ECHO CDN_CNS_URL=download-sry.figoogoo.com>> %GITHUB_ENV%
               ECHO CDN_AKA_URL=download-ak.yapyifkt.vip>> %GITHUB_ENV%
           ) ELSE (
-              EXIT 1
+              ECHO BRANCH=%GITHUB_REF_NAME%>> %GITHUB_ENV%
+              ECHO DEPLOY_TYPE=__DEBUG__>> %GITHUB_ENV%
+              ECHO S3_URL=s3://ky-stage-download>> %GITHUB_ENV%
+              ECHO CLOUD_FRONT_ID=E3H9BTS8MN36PQ>> %GITHUB_ENV%
+              ECHO DOMAIN_ZONE_ID=7a3335f392db3cfec005a3fb9ca06d10>> %GITHUB_ENV%
+              ECHO CDN_CFE_URL=download-hk.5gg.win>> %GITHUB_ENV%
+              ECHO CDN_CNS_URL=download-cnw.5gg.win>> %GITHUB_ENV%
+              ECHO CDN_AKA_URL=download-ak.5gg.win>> %GITHUB_ENV%
           )
         env:
           GITHUB_REF_NAME: ${{ github.ref_name }}
